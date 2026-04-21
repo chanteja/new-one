@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #14001f, #000);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Screens */
+.screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(45deg, #ff4b8b, #8a2be2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255,0,150,0.5);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255,0,200,0.8);
+}
+
+/* Input */
+input {
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    width: 250px;
+    text-align: center;
+}
+
+/* Balloon Screen */
+#balloonBlast {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blastText {
+    font-size: 40px;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px pink; }
+    to { text-shadow: 0 0 30px violet; }
+}
+
+.balloons span {
+    font-size: 40px;
+    position: relative;
+    animation: float 2s infinite ease-in-out;
+}
+
+.balloons span:nth-child(2){animation-delay:0.3s;}
+.balloons span:nth-child(3){animation-delay:0.6s;}
+.balloons span:nth-child(4){animation-delay:0.9s;}
+.balloons span:nth-child(5){animation-delay:1.2s;}
+
+@keyframes float {
+    0% { top: 0; opacity: 0; }
+    50% { top: -120px; opacity: 1; }
+    100% { top: -250px; opacity: 0; }
+}
+
+/* Letter */
+#letterSection {
+    padding: 60px;
+}
+
+#letterTitle {
+    font-size: 38px;
+    color: #ff66cc;
+    text-shadow: 0 0 20px pink;
+}
+
+#letterText {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* Video */
+#videoSection {
+    padding: 50px;
+}
+
+video {
+    width: 75%;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255,0,200,0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    h1 { font-size: 24px; }
+
+    #letterTitle { font-size: 26px; }
+
+    #letterText { font-size: 16px; padding: 10px; }
+
+    input { width: 80%; }
+
+    video { width: 95%; }
+
+    .blastText { font-size: 28px; }
+}
