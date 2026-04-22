@@ -3,27 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Harshini</title>
+<title>Happy Birthday Harshini ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- LANGUAGE SCREEN -->
+<canvas id="fireworks"></canvas>
+
+<!-- Language -->
 <div id="languageScreen" class="screen">
     <h1>Select Language</h1>
     <button onclick="setLanguage('en')">English</button>
     <button onclick="setLanguage('te')">తెలుగు</button>
 </div>
 
-<!-- NAME SCREEN -->
+<!-- Name -->
 <div id="nameScreen" class="screen hidden">
     <h1 id="enterNameText">Enter Your Name</h1>
     <input type="text" id="username" placeholder="Your Name">
     <button onclick="startExperience()">Enter</button>
 </div>
 
-<!-- BALLOON BLAST -->
+<!-- Balloon -->
 <div id="balloonBlast" class="hidden">
     <h1 class="blastText">🎉 Surprise 🎉</h1>
     <div class="balloons">
@@ -31,24 +33,20 @@
     </div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- Main -->
 <div id="mainContent" class="hidden">
 
-    <!-- BGM -->
     <audio id="bgm" loop>
         <source src="assets/bgm.mp3" type="audio/mp3">
     </audio>
 
-    <!-- LETTER -->
     <section id="letterSection">
         <h1 id="letterTitle"></h1>
         <p id="letterText"></p>
     </section>
 
-    <!-- SCROLL -->
-    <button class="scrollBtn" onclick="scrollToVideo()">⬇ Scroll</button>
+    <button onclick="scrollToVideo()">⬇ Scroll</button>
 
-    <!-- VIDEO -->
     <section id="videoSection">
         <video id="birthdayVideo" controls>
             <source src="assets/birthday_video.mp4" type="video/mp4">
